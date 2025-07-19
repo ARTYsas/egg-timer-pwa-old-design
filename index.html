@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Таймер варки яиц</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#ffcc00" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+</head>
+<body>
+  <div class="app-wrapper">
+    <h1>🥚 Таймер варки яиц</h1>
+
+    <div class="slider-group">
+      <label for="sizeSlider">Размер: <span id="sizeLabel">С1</span></label>
+      <input type="range" id="sizeSlider" min="0" max="2" step="any" value="1" />
+      <div class="slider-labels">
+        <span>С0</span><span>С1</span><span>С2</span>
+      </div>
+    </div>
+
+    <div class="slider-group">
+      <label for="cookSlider">Варка: <span id="cookLabel">Мешочек</span></label>
+      <input type="range" id="cookSlider" min="0" max="2" step="any" value="1" />
+      <div class="slider-labels">
+        <span>Всмятку</span><span>Мешочек</span><span>Вкрутую</span>
+      </div>
+    </div>
+
+    <div class="timer-wrapper">
+      <svg id="circle-timer" width="200" height="200">
+        <circle r="90" cx="100" cy="100" fill="none" stroke="#eee" stroke-width="10"/>
+        <circle r="90" cx="100" cy="100" fill="none" stroke="#ffcc00" stroke-width="10" stroke-linecap="round" stroke-dasharray="565.48" stroke-dashoffset="0"/>
+      </svg>
+      <div id="timer">00:00</div>
+    </div>
+
+    <div class="buttons">
+      <button id="start">Старт</button>
+      <button id="stop">Стоп</button>
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
